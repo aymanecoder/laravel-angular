@@ -1,0 +1,51 @@
+<h1 mat-dialog-title>Update new product</h1>
+<form action="" [formGroup]="myform" (ngSubmit)="updateProduct()">
+  <p>
+    <mat-form-field appearance="outline">
+      <mat-label>reference</mat-label>
+      <input matInput placeholder="reference" formControlName="reference" />
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="outline">
+      <mat-label>Description</mat-label>
+      <input matInput placeholder="description" formControlName="description" />
+    </mat-form-field>
+  </p>
+
+  <p>
+    <mat-form-field appearance="outline">
+      <mat-label>quantite</mat-label>
+      <input
+        matInput
+        placeholder="quantite"
+        type="number"
+        formControlName="quantite"
+      />
+    </mat-form-field>
+  </p>
+
+  <p>
+    <mat-form-field appearance="outline">
+      <mat-label>prix</mat-label>
+      <input
+        matInput
+        placeholder="price"
+        type="number"
+        formControlName="prix"
+      />
+    </mat-form-field>
+  </p>
+  <div mat-dialog-action [align]="'end'">
+    <button mat-raised-button color="warn" mat-dialog-close>close</button>
+    <button
+      mat-raised-button
+      color="accent"
+      style="margin-left: 8px"
+      (click)="updateProduct()"
+    >
+      update
+    </button>
+  </div>
+</form>
+
